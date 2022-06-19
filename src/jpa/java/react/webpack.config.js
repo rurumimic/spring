@@ -5,6 +5,11 @@ module.exports = {
     devtool: 'inline-source-map',
     cache: true,
     mode: 'development',
+    resolve: {
+        alias: {
+            'stompjs': __dirname + '/node_modules' + '/stompjs/lib/stomp.js',
+        }
+    },
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'src/main/resources/static/built'),
